@@ -5,15 +5,21 @@ import React, { Component } from 'react'
 class LogIn extends Component {
     constructor(){
         super();
-        this.state = {}
+        this.state = {
+            email: "",
+            password: ""
+        }
     }
 
     handleChange = (event) => {
-        console.log(event);
+        this.setState({
+            [event.target.id]: event.target.value
+        })
     }
 
     handleSubmit = (event) => {
-        console.log(event);
+        event.preventDefault();
+        console.log(this.state);
     }
     render() {
         return(
