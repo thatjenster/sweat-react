@@ -1,0 +1,30 @@
+@import './sass/setup';
+@import './sass/variables';
+@import './sass/mixin';
+@import './sass/navbar';
+@import './sass/authenication';
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('./../Assets/background.png') no-repeat;
+    background-size: cover;
+    font-family: $bodyFont;
+    min-height: 100%;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h3 {
+    position: relative;
+    z-index: 10;
+    font-weight: 400;
+    font-family: $styleFont;
+}

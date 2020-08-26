@@ -25,9 +25,9 @@ class Register extends Component {
     }
     render() {
         return(
-            <div className="container">
+            <div className="container register-container">
                 <form className="logIn-form" onSubmit={this.handleSubmit}>
-                    <h3>Sign In</h3>
+                    <h3>Create an <span className="highlight">Account</span></h3>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
                         <input type="email" id="email" onChange={this.handleChange}/>
@@ -49,7 +49,7 @@ class Register extends Component {
                         <input type="text" id="lastName" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
-                        <button className="login-btn">Register</button>
+                        <button className="auth-button">Register</button>
                     </div>
 
                 </form>

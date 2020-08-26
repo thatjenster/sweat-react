@@ -23,7 +23,7 @@ class LogIn extends Component {
     }
     render() {
         return(
-            <div className="container">
+            <div className="container login-container">
                 <form className="logIn-form" onSubmit={this.handleSubmit}>
                     <h3>Sign In</h3>
                     <div className="input-field">
@@ -35,7 +35,7 @@ class LogIn extends Component {
                         <input type="password" id="password" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
-                        <button className="login-btn">Log In</button>
+                        <button className="auth-button">Log In</button>
                     </div>
 
                 </form>

@@ -1,0 +1,47 @@
+// Register Component style
+
+.register-container,
+.login-container {
+    background-color: $firstBlue;
+    padding: 20px 10px;
+    border-radius: 8px;
+    margin: 75px auto;
+    text-align: center;
+}
+
+.highlight{
+    position:relative;
+    color: white;
+}
+
+.highlight:before{
+    content: "";
+    z-index: -1;
+    left: -0.10em;
+    top: 0.2em;
+    border: 0.5em solid $secondBlue;
+    position: absolute;
+    width: 100%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+
+.auth-button {
+    width: 30%;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font: 400 1.2rem $styleFont;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    background: $thirdBlue;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+.auth-button:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 10px 20px rgba(34, 171, 250, 0.9);
+  }
+

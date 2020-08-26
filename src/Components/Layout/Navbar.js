@@ -9,7 +9,7 @@ const Navbar = () => {
     return(
         <nav className="nav-wrapper blue accent-3">
             <div className="container">
-                <Link to='/' className="brand-logo">Sweat by Jenny</Link>
+                <Link to='/' className="logo">Dear You</Link>
                 <SignIn />
                 <SignOut />
             </div>
