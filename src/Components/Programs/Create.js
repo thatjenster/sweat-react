@@ -1,6 +1,14 @@
 // Class component - storing in local state the user information
 
 import React, { Component } from 'react'
+import { createProgram } from './../../Store/actions/programsAction'
+import { connect } from 'react-redux'
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createProgram: (program) => dispatch(createProgram(program))
+    }
+}
 
 class Create extends Component {
     constructor(){
@@ -19,7 +27,7 @@ class Create extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state);
+        this.props.createProgram(this.state);
     }
     render() {
         return(
@@ -43,4 +51,4 @@ class Create extends Component {
     }
 }
 
-export default Create;
+export default connect(null, mapDispatchToProps)(Create);
