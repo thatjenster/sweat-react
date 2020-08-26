@@ -1,5 +1,3 @@
-// Register Component style
-
 .register-container,
 .login-container {
     background-color: $firstBlue;
@@ -43,5 +41,13 @@
 .auth-button:hover {
     color: rgba(255, 255, 255, 1);
     box-shadow: 0 10px 20px rgba(34, 171, 250, 0.9);
-  }
+}
 
+.input-field label {
+    color: black;
+    text-transform: uppercase;
+    .auth-icon {
+        padding: 0 10px;
+        font-size: 1.5rem;
+    }
+}

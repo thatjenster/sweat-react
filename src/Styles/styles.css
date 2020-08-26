@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -237,7 +238,7 @@ html {
 }
 
 .logo {
-  font: 600 2.5rem "Open Sans", sans-serif;
+  font: normal 3rem 'Monoton', cursive;
   letter-spacing: 1rem;
 }
 
@@ -286,6 +287,16 @@ html {
   color: white;
   -webkit-box-shadow: 0 10px 20px rgba(34, 171, 250, 0.9);
           box-shadow: 0 10px 20px rgba(34, 171, 250, 0.9);
+}
+
+.input-field label {
+  color: black;
+  text-transform: uppercase;
+}
+
+.input-field label .auth-icon {
+  padding: 0 10px;
+  font-size: 1.5rem;
 }
 
 html {

@@ -27,11 +27,11 @@ class LogIn extends Component {
                 <form className="logIn-form" onSubmit={this.handleSubmit}>
                     <h3>Sign In</h3>
                     <div className="input-field">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email"><i className="auth-icon fa fa-envelope-o" aria-hidden="true"></i>Email</label>
                         <input type="email" id="email" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
-                        <label htmlFor="password">Password</label>
+                        <label htmlFor="password"><i className="auth-icon fa fa-key" aria-hidden="true"></i>Password</label>
                         <input type="password" id="password" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">

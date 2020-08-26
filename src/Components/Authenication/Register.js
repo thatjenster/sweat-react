@@ -29,23 +29,19 @@ class Register extends Component {
                 <form className="logIn-form" onSubmit={this.handleSubmit}>
                     <h3>Create an <span className="highlight">Account</span></h3>
                     <div className="input-field">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email"><i className="auth-icon fa fa-envelope-o" aria-hidden="true"></i>Email</label>
                         <input type="email" id="email" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
-                        <label htmlFor="password">Password</label>
+                        <label htmlFor="password"><i className="auth-icon fa fa-key" aria-hidden="true"></i>Password</label>
                         <input type="password" id="password" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
-                        <label htmlFor="password">Password</label>
-                        <input type="password" id="password" onChange={this.handleChange}/>
-                    </div>
-                    <div className="input-field">
-                        <label htmlFor="firstName">First Name</label>
+                        <label htmlFor="firstName"><i className="auth-icon fa fa-user" aria-hidden="true"></i>First Name</label>
                         <input type="text" id="firstName" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
-                        <label htmlFor="lastName">Last Name</label>
+                        <label htmlFor="lastName"><i className="auth-icon fa fa-user" aria-hidden="true"></i>Last Name</label>
                         <input type="text" id="lastName" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
