@@ -2,15 +2,24 @@
 
 import React, { Component } from 'react'
 import Notice from './Notice'
-import Lists from './../Projects/Lists'
+import Lists from '../Programs/Lists'
+import { connect } from 'react-redux'
+
+const mapStateToProps = (state) => {
+    return {
+        programs: state.create.programs
+    }
+}
 
 class Dashboard extends Component {
     render(){
+        console.log(this.props);
+        const { programs } = this.props;
         return(
             <div className="dashboard container">
                 <div className="row">
                     <div className="col s12 m6">
-                        <Lists />
+                        <Lists programs={programs}/>
                     </div>
 
                     <div className="col s12 m5 offset-m1">
@@ -23,4 +32,4 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard;
+export default connect(mapStateToProps)(Dashboard);
