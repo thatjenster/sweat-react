@@ -4,19 +4,10 @@ import React, { Component } from 'react'
 import { createProgram } from './../../Store/actions/programsAction'
 import { connect } from 'react-redux'
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        createProgram: (program) => dispatch(createProgram(program))
-    }
-}
-
 class Create extends Component {
-    constructor(){
-        super();
-        this.state = {
-            title: "",
-            content: ""
-        }
+    state = {
+        title: '',
+        content: ''
     }
 
     handleChange = (event) => {
@@ -48,6 +39,12 @@ class Create extends Component {
                 </form>
             </div>
         )
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        createProgram: (program) => dispatch(createProgram(program))
     }
 }
 

@@ -5,12 +5,6 @@ import Notice from './Notice'
 import Lists from '../Programs/Lists'
 import { connect } from 'react-redux'
 
-const mapStateToProps = (state) => {
-    return {
-        programs: state.create.programs
-    }
-}
-
 class Dashboard extends Component {
     render(){
         console.log(this.props);
@@ -29,6 +23,12 @@ class Dashboard extends Component {
 
             </div>
         )
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        programs: state.create.programs
     }
 }
 

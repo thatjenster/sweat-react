@@ -7,11 +7,16 @@ const initState = {
 }
 
 const createReducer = (state = initState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case 'CREATE_PROGRAM':
             console.log('created program', action.program)
+            return state;
+        case 'CREATE_PROGRAM_ERROR':
+            console.log('create project error', action.err);
+            return state;
+        default: 
+            return state;
     }
-    return state
-}
+};
 
 export default createReducer;
