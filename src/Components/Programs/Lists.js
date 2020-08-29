@@ -9,8 +9,8 @@ const Lists = ({ programs} ) => {
         <div className="lists section">
             {programs && programs.map(program => {
                 return(
-                    <Link to={'/program/' + program.id}>
-                    <Summary program={program} key={program.id}/>
+                    <Link to={'/program/' + program.id} key={program.id}>
+                    <Summary program={program} />
                     </Link>
                 )
             })}
