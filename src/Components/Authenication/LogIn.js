@@ -1,6 +1,8 @@
 // Class component - storing in local state the user information
 
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { signIn } from './../../Store/actions/authAction'
 
 class LogIn extends Component {
     constructor(){
@@ -19,9 +21,10 @@ class LogIn extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state);
+        this.props.signIn(this.state);
     }
     render() {
+        const { authError } = this.props;
         return(
             <div className="container login-container">
                 <form className="logIn-form" onSubmit={this.handleSubmit}>
@@ -36,6 +39,9 @@ class LogIn extends Component {
                     </div>
                     <div className="input-field">
                         <button className="auth-button">Log In</button>
+                        <div className="red-text center">
+                            { authError ? <p>{authError}</p> : null}
+                        </div>
                     </div>
 
                 </form>
@@ -44,4 +50,16 @@ class LogIn extends Component {
     }
 }
 
-export default LogIn;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signIn: (creds) => dispatch(signIn(creds))
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        authError: state.auth.authError
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LogIn);
