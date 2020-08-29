@@ -5,6 +5,7 @@ import { compose } from 'redux'
 
 const Details = (props) => {
     const { program } = props;
+    console.log(props);
     if (program) {
         return(
         <div className="container section details">
@@ -29,8 +30,8 @@ const Details = (props) => {
     }
 }
 
-const mapStateToProps = (state, onlyProps) => {
-    const id = onlyProps.match.params.id;
+const mapStateToProps = (state, ownProps) => {
+    const id = ownProps.match.params.id;
     const programs = state.firestore.data.programs;
     const program = programs ? programs[id] : null;
     return {

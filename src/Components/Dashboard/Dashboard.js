@@ -9,7 +9,6 @@ import { compose } from 'redux'
 
 class Dashboard extends Component {
     render(){
-        console.log(this.props);
         const { programs } = this.props;
         return(
             <div className="dashboard container">
