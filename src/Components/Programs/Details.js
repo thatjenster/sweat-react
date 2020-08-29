@@ -1,23 +1,44 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { firestoreConnect } from 'react-redux-firebase'
+import { compose } from 'redux'
 
 const Details = (props) => {
-    const id = props.match.params.id; 
-    return (
+    const { program } = props;
+    if (program) {
+        return(
         <div className="container section details">
             <div className="card z-depth-0">
                 <div className="card-content">
-                    <span className="card-title">Project Title - {id} </span>
-                    <p>Tootsie roll sweet carrot cake macaroon. Marzipan cotton candy gingerbread brownie wafer jelly beans cake. Macaroon candy canes marshmallow muffin. Biscuit cheesecake oat cake caramels. Donut croissant lemon drops donut pastry. Fruitcake caramels cotton candy cotton candy candy biscuit. Pie carrot cake donut soufflé soufflé gingerbread cupcake soufflé candy canes. Candy toffee macaroon apple pie candy carrot cake sugar plum fruitcake. Tootsie roll danish tootsie roll powder muffin gingerbread dragée. Cake pudding biscuit marshmallow lemon drops. Jelly beans cake tootsie roll tiramisu donut candy canes. Croissant chupa chups chupa chups liquorice gummi bears.
-                    </p>
+                <span className="card-title">{program.title}</span>
+                    <p>{program.content}</p>
                     <div className="card-action">
-                        <div>Posted by UNKNOWN</div>
+                        <div>{program.authorFirstName} {program.authorLastName}</div>
                         <div>DATED</div>
                     </div>
                 </div>
-            </div>
-            
+            </div> 
         </div>
-    )
+        )
+    } else {
+        return (
+            <div className="container center">
+                <p>Loading Program :)</p>
+            </div>
+        )
+    }
 }
 
-export default Details
+const mapStateToProps = (state, onlyProps) => {
+    const id = onlyProps.match.params.id;
+    const programs = state.firestore.data.programs;
+    const program = programs ? programs[id] : null;
+    return {
+        program: program
+    }
+}
+
+export default compose(
+    connect(mapStateToProps),
+    firestoreConnect(() => ['programs'])
+)(Details);
