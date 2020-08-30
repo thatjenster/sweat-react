@@ -1,0 +1,24 @@
+.social-box {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 0;
+    z-index: 100;
+  }
+    
+  .social i {
+    display: block;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 2.3rem;
+        &:hover,
+        &:focus {
+            color: $secondBlue;
+            border: 2px solid $secondBlue;
+            border-radius: 50%;
+            padding: 10px;
+        }
+  }
+    
+  .social a {
+    color: #3c3c3c;
+  }

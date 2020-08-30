@@ -242,6 +242,31 @@ html {
   letter-spacing: 1rem;
 }
 
+.social-box {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 0;
+  z-index: 100;
+}
+
+.social i {
+  display: block;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-size: 2.3rem;
+}
+
+.social i:hover, .social i:focus {
+  color: #01579b;
+  border: 2px solid #01579b;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.social a {
+  color: #3c3c3c;
+}
+
 .register-container,
 .login-container {
   background-color: #b3e5fc;
