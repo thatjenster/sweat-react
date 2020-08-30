@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
     auth: authenicationReducer,
     create: createReducer,
     firestore: firestoreReducer,
-    firebaseApp: firebaseReducer
+    firebase: firebaseReducer
 });
 
 export default rootReducer;

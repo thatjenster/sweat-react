@@ -5,14 +5,18 @@ import { Link } from 'react-router-dom'
 import SignIn from './SignIn'
 import SignOut from './SignOut'
 import { connect } from 'react-redux'
+import { isLoaded } from 'react-redux-firebase'
 
-const Navbar = () => {
+
+const Navbar = (props) => {
+    const { auth } = props;
+    
+    const links = auth.uid ? <SignIn /> : <SignOut />;
     return(
         <nav className="nav-wrapper blue accent-3">
             <div className="container">
-                <Link to='/' className="logo">Sweat</Link>
-                <SignIn />
-                <SignOut />
+                <Link to='/dashboard' className="logo">Sweat</Link>
+                { isLoaded(auth) && links }
             </div>
 
         </nav>
@@ -20,9 +24,8 @@ const Navbar = () => {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
-
+        auth: state.firebase.auth
     }
 }
 

@@ -6,10 +6,12 @@ import Lists from '../Programs/Lists'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
+import { Redirect } from 'react-router-dom'
 
 class Dashboard extends Component {
     render(){
-        const { programs } = this.props;
+        const { programs, auth } = this.props;
+        if (!auth.uid) return <Redirect to='/header' />
         return(
             <div className="dashboard container">
                 <div className="row">
@@ -30,7 +32,8 @@ class Dashboard extends Component {
 const mapStateToProps = (state) => {
     console.log(state);
     return {
-        programs: state.firestore.ordered.programs
+        programs: state.firestore.ordered.programs,
+        auth: state.firebase.auth
     }
 }
 

@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import { createProgram } from './../../Store/actions/programsAction'
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
 class Create extends Component {
     state = {
@@ -21,6 +22,8 @@ class Create extends Component {
         this.props.createProgram(this.state);
     }
     render() {
+        const { auth } = this.props;
+        if (!auth.uid) return <Redirect to='/header' />
         return(
             <div className="container">
                 <form className="logIn-form" onSubmit={this.handleSubmit}>
@@ -42,10 +45,16 @@ class Create extends Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        auth: state.firebase.auth
+    }
+}
+
 const mapDispatchToProps = dispatch => {
     return {
         createProgram: (program) => dispatch(createProgram(program))
     }
 }
 
-export default connect(null, mapDispatchToProps)(Create);
+export default connect(mapStateToProps, mapDispatchToProps)(Create);

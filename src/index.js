@@ -22,11 +22,13 @@ const store = createStore(rootReducer,
 const information = {
     userProfile: 'users',
   }
+  
 const infoProps = {
     firebase,
     config: information,
     dispatch: store.dispatch,
     createFirestoreInstance,
+    
 }
 
 ReactDOM.render(

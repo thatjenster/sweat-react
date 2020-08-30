@@ -1,6 +1,8 @@
 // Class component - storing in local state the user information
 
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
 class Register extends Component {
     constructor(){
@@ -24,6 +26,8 @@ class Register extends Component {
         console.log(this.state);
     }
     render() {
+        const { auth } = this.props;
+        if (auth.uid) return <Redirect to="/" />
         return(
             <div className="container register-container">
                 <form className="logIn-form" onSubmit={this.handleSubmit}>
@@ -54,4 +58,10 @@ class Register extends Component {
     }
 }
 
-export default Register;
+const mapStateToProps = (state) => {
+    return {
+        auth: state.firebase.auth
+    }
+}
+
+export default connect(mapStateToProps)(Register);
