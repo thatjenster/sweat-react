@@ -1,5 +1,6 @@
 // Stateless component - only data being passed down
 import React from 'react'
+import moment from 'moment'
 
 const Summary = ({program}) => {
     return(
@@ -7,7 +8,7 @@ const Summary = ({program}) => {
             <div className="card-content">
                 <span className="card-title">{program.title}</span>
                     <p>Posted by {program.authorFirstName} {program.authorLastName}</p>
-                <p>DATE</p>
+                <p>{ moment(program.createdAt.toDate()).calendar() }</p>
             </div>
         </div>
     )
