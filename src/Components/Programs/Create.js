@@ -20,6 +20,7 @@ class Create extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.props.createProgram(this.state);
+        this.props.history.push('/dashboard');
     }
     render() {
         const { auth } = this.props;

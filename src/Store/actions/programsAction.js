@@ -3,11 +3,13 @@ export const createProgram = (program) => {
         
         // making async call to get data from database
         const firestore = getFirestore();
+        const profile = getState().firebase.profile;  
+        const authorId = getState().firebase.auth.uid;
         firestore.collection('programs').add({
             ...program,
-            authorFirstName: 'Jenny',
-            authorLastName: 'D',
-            authorId: 12345,
+            authorFirstName: profile.firstName,
+            authorLastName: profile.lastName,
+            authorId: authorId,
             createdAt: new Date()
         }).then(() => {
             dispatch({ type: 'CREATE_PROGRAM', program });

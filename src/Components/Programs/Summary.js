@@ -6,8 +6,8 @@ const Summary = ({program}) => {
         <div className="card z-depth-0 summary">
             <div className="card-content">
                 <span className="card-title">{program.title}</span>
-                <p>Posted by UNKNOWN</p>
-                <p>DATE INSERT</p>
+                    <p>Posted by {program.authorFirstName} {program.authorLastName}</p>
+                <p>DATE</p>
             </div>
         </div>
     )
