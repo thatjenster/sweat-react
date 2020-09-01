@@ -1,3 +1,18 @@
+.header-image {
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+        img {
+            border: 10px solid $secondBlue;
+            border-radius: 5px;
+        }
+}
+
 .social-box {
     position: fixed;
     right: 1.5rem;
