@@ -292,6 +292,102 @@ html {
   color: #3c3c3c;
 }
 
+.summary {
+  border: 1px blue solid;
+  background: rgba(179, 229, 252, 0.5);
+  color: black;
+}
+
+.container-clock {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.clock-wrapper {
+  background-color: #fafafa;
+  width: 100%;
+  padding: 1rem;
+  -webkit-box-shadow: 0 3px 6px black;
+          box-shadow: 0 3px 6px black;
+  border-radius: 20px;
+}
+
+.clock-wrapper h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: black;
+}
+
+.clock-wrapper h3 {
+  text-align: center;
+  color: black;
+}
+
+.controls-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.controls-wrapper button {
+  font-size: 2rem;
+  display: block;
+  border: none;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+}
+
+.timeset-wrapper {
+  margin: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.timeset-wrapper .control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.timeset-wrapper .control h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.timeset-wrapper .control h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2rem;
+  color: black;
+}
+
+.timeset-wrapper .control button {
+  border: none;
+  background-color: transparent;
+  color: black;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 .register-container,
 .login-container {
   background-color: #b3e5fc;

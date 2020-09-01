@@ -23,7 +23,6 @@ class Dashboard extends Component {
                         <Notice notifications={notifications}/>
                     </div>
                 </div>
-
             </div>
         )
     }

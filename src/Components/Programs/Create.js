@@ -37,9 +37,8 @@ class Create extends Component {
                         <textarea id="content" className="materialize-textarea" onChange={this.handleChange}></textarea>
                     </div>
                     <div className="input-field">
-                        <button className="create-btn">CREATE!</button>
+                        <button className="create-btn btn">CREATE!</button>
                     </div>
-
                 </form>
             </div>
         )

@@ -4,6 +4,7 @@ import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import { Redirect } from 'react-router-dom'
 import moment from 'moment'
+import Clock from './Clock/Clock'
 
 const Details = (props) => {
     const { program, auth } = props;
@@ -22,6 +23,7 @@ const Details = (props) => {
                     </div>
                 </div>
             </div> 
+            <Clock />
         </div>
         )
     } else {
