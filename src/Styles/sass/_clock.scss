@@ -3,11 +3,11 @@
     text-align: center;
 }  
 .clock-wrapper {
-    background-color: #fafafa;
+    background-color: $firstBlue;
     width: 100%;
     padding: 1rem;
     box-shadow: 0 3px 6px black;
-    border-radius: 20px;
+    border-radius: 9px;
 }
 
 .clock-wrapper h2 {

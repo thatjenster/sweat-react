@@ -2,11 +2,12 @@
     width: 500px;
     height: 600px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     opacity: 0.8;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -25%);
+    text-align: center;
         img {
             border: 10px solid $secondBlue;
             border-radius: 5px;
