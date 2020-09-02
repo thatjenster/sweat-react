@@ -35,6 +35,7 @@ class Create extends Component {
                     <div className="input-field">
                         <label htmlFor="content">Content Goes Here</label>
                         <textarea id="content" className="materialize-textarea" onChange={this.handleChange}></textarea>
+                        
                     </div>
                     <div className="input-field">
                         <button className="create-btn btn">CREATE!</button>

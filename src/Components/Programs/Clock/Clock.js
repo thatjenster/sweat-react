@@ -7,8 +7,8 @@ import Timer from './Timer'
 import Controls from './Controls'
 
 const Clock = () => {
-  const [breakVal, setBreakVal] = useState(5)
-  const [sessionVal, setSessionVal] = useState(10)
+  const [breakVal, setBreakVal] = useState(2)
+  const [sessionVal, setSessionVal] = useState(5)
   const [mode, setMode] = useState('session')
   const [time, setTime] = useState(sessionVal * 60 * 1000)
   const [active, setActive] = useState(false)
@@ -37,9 +37,9 @@ const Clock = () => {
     beep.current.currentTime = 0
     setActive(false)
     setMode('session')
-    setBreakVal(5)
-    setSessionVal(10)
-    setTime(10 * 60 * 1000)
+    setBreakVal(2)
+    setSessionVal(5)
+    setTime(5 * 60 * 1000)
   }
 
   return (
