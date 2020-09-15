@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/sweat-react/static/css/main.d36fdbe6.chunk.css",
+    "main.js": "/sweat-react/static/js/main.b8ea7184.chunk.js",
+    "main.js.map": "/sweat-react/static/js/main.b8ea7184.chunk.js.map",
+    "runtime-main.js": "/sweat-react/static/js/runtime-main.39ba37a1.js",
+    "runtime-main.js.map": "/sweat-react/static/js/runtime-main.39ba37a1.js.map",
+    "static/css/2.4e35ac08.chunk.css": "/sweat-react/static/css/2.4e35ac08.chunk.css",
+    "static/js/2.3cd01608.chunk.js": "/sweat-react/static/js/2.3cd01608.chunk.js",
+    "static/js/2.3cd01608.chunk.js.map": "/sweat-react/static/js/2.3cd01608.chunk.js.map",
+    "index.html": "/sweat-react/index.html",
+    "precache-manifest.7d7882d45627dac2ef912f39a4d6399a.js": "/sweat-react/precache-manifest.7d7882d45627dac2ef912f39a4d6399a.js",
+    "service-worker.js": "/sweat-react/service-worker.js",
+    "static/css/2.4e35ac08.chunk.css.map": "/sweat-react/static/css/2.4e35ac08.chunk.css.map",
+    "static/css/main.d36fdbe6.chunk.css.map": "/sweat-react/static/css/main.d36fdbe6.chunk.css.map",
+    "static/js/2.3cd01608.chunk.js.LICENSE.txt": "/sweat-react/static/js/2.3cd01608.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/sweat-react/static/media/background.7f30b442.png",
+    "static/media/font-awesome.min.css": "/sweat-react/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/header.png": "/sweat-react/static/media/header.bc4f8e79.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.39ba37a1.js",
+    "static/css/2.4e35ac08.chunk.css",
+    "static/js/2.3cd01608.chunk.js",
+    "static/css/main.d36fdbe6.chunk.css",
+    "static/js/main.b8ea7184.chunk.js"
+  ]
+}
